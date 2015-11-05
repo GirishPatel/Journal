@@ -1,2 +1,3 @@
 # Journal
-Simple Journal Writer App
+
+This is simple app for writing journal with timestamp.

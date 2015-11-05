@@ -1,3 +1,7 @@
+import javax.imageio.ImageIO
+import java.io.File
+import javax.swing.ImageIcon
+
 import scala.swing._
 import scala.swing.event._
 
@@ -5,9 +9,13 @@ import scala.swing.event._
  * Created by girish.patel on 05/11/15.
  */
 class UI extends MainFrame {
+
   private def restrictHeight(s: Component) {
     s.maximumSize = new Dimension(Short.MaxValue, s.preferredSize.height)
   }
+
+  val icon = new ImageIcon(getClass.getClassLoader.getResource("notebook.png"))
+  this.iconImage = icon.getImage
 
   title = "Journal"
   val logJournalField = new TextField { columns = 32 }
