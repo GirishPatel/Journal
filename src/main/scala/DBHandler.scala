@@ -6,17 +6,20 @@ import java.io.FileWriter
 object DBHandler {
 
   val fileName = "/Users/girish.patel/journal_history"
-  val fw = new FileWriter(fileName, true)
 
+  // todo: open and closing for file is in same function. Should be independent.
   def addLine(msg:String) {
+    val fw = new FileWriter(fileName, true)
     fw.write(msg)
     fw.flush()
+    fw.close()
   }
 
   def loadFile:List[Message] = {
     val lines = scala.io.Source.fromFile(fileName).getLines
     val startOfDay = DateUtility.getStartOfDay.getTime
     lines
+      .filter(_.trim.nonEmpty)
       .map(line => {
         line.split("\t") match { case Array(t,m) => Message(DateUtility.toDateTime(t),m) }
       })
@@ -29,6 +32,7 @@ object DBHandler {
   def getMessages:String = {
     loadFile
       .map(msg => DateUtility.toTimeString(msg.timeStamp) + "\t" + msg.message)
+      .reverse
       .mkString("\n") + "\n"
   }
 }

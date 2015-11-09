@@ -4,6 +4,11 @@
 1. Add project icon.
 2. Correct journal history path to prepend home directory.
 3. Create executable for mac.
+4. Log windows properties:
+  1. Only show last n messages.
+  2. Can hide/unhide
+  3. Can display stats, motivational quotes or some image.
+  4. Always keep last message visible.
 
 ## Features
 1. Timestamp support for every entry.

@@ -48,11 +48,11 @@ class UI extends MainFrame {
   }
 
   def logJournalNow {
-    val msg = logJournalField.text.toLowerCase
+    val msg = logJournalField.text
     if (msg.nonEmpty) {
       val line = DateUtility.prependDate(msg + "\n")
       DBHandler.addLine(line)
-      resultField.text += line.replaceAll(raw"^\d\d\d\d-\d\d-\d\d ","")
+      resultField.text = line.replaceAll(raw"^\d\d\d\d-\d\d-\d\d ","") + resultField.text
       resultField.caret.position = 0
       logJournalField.text = ""
     }
