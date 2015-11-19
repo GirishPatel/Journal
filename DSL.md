@@ -39,6 +39,7 @@
 3. Significant
 
 ## Commands
+
 ### Properties of commands
 1. Should be simple, i.e. negligible learing curve
 2. Should be intuitive.
@@ -47,6 +48,8 @@
   1. present simple verb represent action
   2. present continues verb represent start of action
   3. present perfect verb represent end of action
+  
 ### Supported commands
 1. **exit**: Exit application
-2. **start**:
+2. **started**: Start of an action
+3. **completed**: Completion of an action
