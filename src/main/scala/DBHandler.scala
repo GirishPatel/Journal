@@ -32,7 +32,6 @@ object DBHandler {
   def getMessages:String = {
     loadFile
       .map(msg => DateUtility.toTimeString(msg.timeStamp) + "\t" + msg.message)
-      .reverse
       .mkString("\n") + "\n"
   }
 }
