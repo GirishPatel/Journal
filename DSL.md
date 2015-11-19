@@ -12,15 +12,41 @@
   3. Time spent in tasks
 4. Reminders support
 5. Structures to ease analysis
+6. Views support:
+  1. To show filtered list - all, done, pending etc.
+  2. Multi-tab support to segregate similar type of journal - reminders, tasks etc.
 
 ## DSL Rules
 1. Continue line -
-2. Bullet line *
+2. Bullet line *,1,2,3
 3. Add commands to do operations. e.g. delete previous line etc
+4. Add index using colon :. e.g. tag:journal, importance:5, type:reminder
 
 ## Supported Types
-1. Event done
-2. New 
+
+### Events
+ with/without period info (start, complete etc)
+ 
+### Ideas, thoughts
+
+### Reminders
+
+### Tasks
+
+#### Properties
+1. Importance
+2. Urgent
+3. Significant
 
 ## Commands
-1. *exit*: Exit application
+### Properties of commands
+1. Should be simple, i.e. negligible learing curve
+2. Should be intuitive.
+3. Commands will case insensitive
+4. Follow simple english rules:
+  1. present simple verb represent action
+  2. present continues verb represent start of action
+  3. present perfect verb represent end of action
+### Supported commands
+1. **exit**: Exit application
+2. **start**:
